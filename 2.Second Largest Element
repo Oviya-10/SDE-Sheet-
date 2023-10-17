@@ -1,0 +1,16 @@
+public class Solution {
+    public static int[] getSecondOrderElements(int n, int []arr ) {
+int s_l = Integer.MIN_VALUE;
+        int large = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            if(arr[i]>large){
+                s_l=large;
+                large=arr[i];
+                
+            }
+            else if(arr[i]>s_l && arr[i]!=large)
+                s_l=arr[i];
+        }
+        return s_l;     
+    }
+}
